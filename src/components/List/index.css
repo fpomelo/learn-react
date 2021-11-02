@@ -1,0 +1,10 @@
+.todo-list {
+  width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  outline-style: none;
+}
+
+.todo-list:focus {
+  border-color: skyblue;
+}

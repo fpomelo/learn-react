@@ -1,0 +1,7 @@
+.input-todo {
+  width: 500px;
+  height: 40px;
+  padding-left: 6px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
