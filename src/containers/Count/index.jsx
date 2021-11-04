@@ -4,7 +4,7 @@ import {
   decrementAction,
   incrementAction,
   incrementAsyncAction
-} from '../../redux/count_action';
+} from '../../redux/actions/count';
 
 class Count extends Component {
 
@@ -34,6 +34,7 @@ class Count extends Component {
     return (
       <div>
         <h2>当前求和为：{this.props.count}</h2>
+        <h4>总人数为{this.props.personsCount}</h4>
         <select ref={c => this.selectNumber = c}>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -49,7 +50,10 @@ class Count extends Component {
 }
 
 
-const mapStateToProps = state => ({count: state})
+const mapStateToProps = state => ({
+  count: state.count,
+  personsCount: state.persons.length
+})
 
 // const mapDispatchToProps = dispatch => ({
 //   increment: number => dispatch(incrementAction(number)),
